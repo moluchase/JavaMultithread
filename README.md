@@ -1,0 +1,2 @@
+# JavaMultithread
+JavaMultithread是在学习Java核心编程技术这本书所做的笔记，其中src下的note.txt是一个粗略的总结，Java多线程核心编程技术这本书比较基础，是一本多线程入门书籍
