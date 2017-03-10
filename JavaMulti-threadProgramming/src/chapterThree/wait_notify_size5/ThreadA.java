@@ -1,0 +1,32 @@
+package chapterThree.wait_notify_size5;
+
+/**
+ * Created by Administrator on 2017/3/4.
+ */
+public class ThreadA extends Thread {
+    private Object lock;
+    public ThreadA(Object lock){
+        super();
+        this.lock=lock;
+    }
+
+    @Override
+    public void run() {
+        try{
+            synchronized (lock){
+                if(MyList.size()!=5){
+                    Thread.sleep(1000);
+                    System.out.println("wait begin "+
+                            System.currentTimeMillis()
+                    );
+                    lock.wait();
+                    System.out.println("wait end "+
+                            System.currentTimeMillis()
+                    );
+                }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
