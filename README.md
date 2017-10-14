@@ -3,12 +3,17 @@
 这本书所做的笔记，其中src下的note.txt是一个粗略的总结，Java多线程核心编程技术这本书比较基础，是一本多线程入门书籍
 
 ### 第一章 Java多线程技能(2017年3月3日）
-t12
+#### t12
 thread.interrupt()中断的是thread线程
+
 thread.interruptted()判断的是当前的线程，而不是指thread本身（静态方法），该方法执行后会清除中断标志位
+
 当前线程，既然是在main中执行的该语句，则当前线程就是main线程，主要是看该语句在哪执行
+
 使用Thread.currentThread().interrupt()中断的是当前的线程
+
 使用thread.isinterruptted()判断的是thread线程本身，（不是静态方法），该方法执行后不会清除中断标志位
+
 
 t15
 在沉睡中停止
